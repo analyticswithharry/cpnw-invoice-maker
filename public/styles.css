@@ -7,10 +7,10 @@ body {
     line-height: 1.4;
 }
 .invoice-box {
-    max-width: 100%;
-    width: 900px; /* Wide for large screens */
+    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #d3e0ea;
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -18,7 +18,7 @@ body {
     font-size: 14px;
 }
 .header {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,89 +47,74 @@ body {
 .info-section {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    gap: 10px;
+    margin-bottom: 15px;
+    gap: 8px;
 }
 .info-box {
     flex: 1;
-    padding: 12px;
+    padding: 10px;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
 .info-box p {
     margin: 0;
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 4px;
     font-weight: normal;
 }
 .info-box input, .info-box textarea {
     width: 100%;
     padding: 5px;
     border: 1px solid #d3e0ea;
-    font-size: 13px;
+    font-size: 12px;
     color: #000000;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     box-sizing: border-box;
 }
 .info-box textarea {
-    height: 50px;
+    height: 40px;
     resize: none;
 }
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #d3e0ea;
 }
 th, td {
-    padding: 10px;
+    padding: 8px;
     text-align: left;
     border: 1px solid #d3e0ea;
 }
 th {
     background-color: #2b6cb0;
     color: #ffffff;
-    font-weight: normal;
-    font-size: 13px;
+    font-weight: bold;
+    font-size: 12px;
 }
 td {
-    font-size: 13px;
+    font-size: 12px;
     background-color: #f9fcff;
 }
-td input[type="text"] {
+td input[type="text"], td input[type="number"] {
     width: 100%;
     border: none;
     padding: 5px;
-    font-size: 13px;
+    font-size: 12px;
     color: #000000;
-}
-td input[type="number"] {
-    width: 100%; /* Full width for better visibility */
-    border: none;
-    padding: 5px;
-    font-size: 13px;
-    color: #000000;
+    box-sizing: border-box;
 }
 .product-name-col {
-    width: 25%; /* Wider for better visibility */
+    width: 28%; /* Wider for clarity */
 }
 .description-col {
-    width: 35%; /* Wider for better visibility */
+    width: 32%; /* Wider for clarity */
 }
-.quantity-col {
-    width: 10%;
-}
-.unit-price-col {
-    width: 10%;
-}
-.discount-col {
-    width: 10%;
-}
-.price-col {
-    width: 10%;
+.quantity-col, .unit-price-col, .discount-col, .price-col {
+    width: 8%;
 }
 .action-col {
-    width: 10%;
+    width: 8%;
 }
 .btn {
     padding: 8px 15px;
@@ -137,7 +122,7 @@ td input[type="number"] {
     color: #ffffff;
     border: none;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
     margin: 5px 0;
     transition: background-color 0.2s ease;
 }
@@ -151,30 +136,29 @@ td input[type="number"] {
     background-color: #c53030;
 }
 .totals-section {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .totals-box {
-    padding: 12px;
+    padding: 10px;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
 .totals-box p {
     margin: 0;
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 4px;
 }
 .totals-box input, .totals-box span {
     width: 100%;
     padding: 5px;
     border: 1px solid #d3e0ea;
-    font-size: 13px;
+    font-size: 12px;
     color: #000000;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     box-sizing: border-box;
 }
 .totals-box input[type="number"] {
     width: 50px;
-    border: 1px solid #d3e0ea;
 }
 .totals-box span {
     border: none;
@@ -184,14 +168,14 @@ td input[type="number"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 .totals-box .subtotal-row p {
     margin: 0;
-    font-size: 13px;
+    font-size: 12px;
     flex: 0 0 50%;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 .totals-box .subtotal-row span {
     flex: 1;
@@ -203,14 +187,14 @@ td input[type="number"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 .totals-box .tax-rate-row p {
     margin: 0;
-    font-size: 13px;
+    font-size: 12px;
     flex: 0 0 50%;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 .totals-box .tax-rate-row .tax-rate-container {
     display: flex;
@@ -218,21 +202,9 @@ td input[type="number"] {
     flex: 1;
 }
 .totals-box .tax-rate-row input {
-    width: 90px;
+    width: 50px;
     margin-bottom: 0;
     margin-right: 5px;
-    padding: 8px 10px;
-    border: 1.5px solid #4a90e2;
-    background-color: #eaf4fb;
-    font-weight: bold;
-    font-size: 12px;
-    border-radius: 3px;
-    transition: border-color 0.2s;
-}
-.totals-box .tax-rate-row input:focus {
-    border-color: #2b6cb0;
-    outline: none;
-    background-color: #d6eafd;
 }
 .totals-box .tax-rate-row span {
     margin-bottom: 0;
@@ -241,12 +213,12 @@ td input[type="number"] {
 }
 .note-textarea {
     width: 100%;
-    height: 80px;
+    height: 50px;
     padding: 5px;
     border: 1px solid #d3e0ea;
-    font-size: 13px;
+    font-size: 12px;
     color: #000000;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     resize: vertical;
     box-sizing: border-box;
 }
@@ -282,7 +254,6 @@ td input[type="number"] {
 .color-blue .info-box, .color-blue .totals-box { border-color: #4a90e2; }
 .color-blue .download-btn .btn { background-color: #4a90e2; }
 .color-blue .download-btn .btn:hover { background-color: #357abd; }
-
 .color-green .header { border-bottom-color: #2f855a; }
 .color-green th { background-color: #2f855a; }
 .color-green .btn { background-color: #2f855a; }
@@ -290,7 +261,6 @@ td input[type="number"] {
 .color-green .info-box, .color-green .totals-box { border-color: #48bb78; }
 .color-green .download-btn .btn { background-color: #48bb78; }
 .color-green .download-btn .btn:hover { background-color: #38a169; }
-
 .color-purple .header { border-bottom-color: #6b46c1; }
 .color-purple th { background-color: #6b46c1; }
 .color-purple .btn { background-color: #6b46c1; }
@@ -298,7 +268,6 @@ td input[type="number"] {
 .color-purple .info-box, .color-purple .totals-box { border-color: #9f7aea; }
 .color-purple .download-btn .btn { background-color: #9f7aea; }
 .color-purple .download-btn .btn:hover { background-color: #805ad5; }
-
 .color-orange .header { border-bottom-color: #dd6b20; }
 .color-orange th { background-color: #dd6b20; }
 .color-orange .btn { background-color: #dd6b20; }
@@ -307,17 +276,64 @@ td input[type="number"] {
 .color-orange .download-btn .btn { background-color: #f6ad55; }
 .color-orange .download-btn .btn:hover { background-color: #ed8936; }
 
-@media (max-width: 900px) {
+/* Tablet View */
+@media (max-width: 768px) {
     .invoice-box {
-        width: 100%;
-        padding: 15px;
+        max-width: 700px;
+        padding: 12px;
+        font-size: 13px;
+    }
+    .header .company-name input {
+        font-size: 18px;
+    }
+    .header .invoice-title {
+        font-size: 20px;
     }
     .info-section {
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
     }
     .info-box {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
+        padding: 8px;
+    }
+    .info-box p, .info-box input, .info-box textarea {
+        font-size: 11px;
+    }
+    table {
+        font-size: 11px;
+    }
+    th, td {
+        padding: 6px;
+    }
+    .product-name-col, .description-col {
+        width: auto;
+    }
+    .totals-box p, .totals-box input, .totals-box span {
+        font-size: 11px;
+    }
+    .download-btn {
+        position: static;
+        text-align: center;
+        margin-bottom: 12px;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .download-btn .btn, .color-select {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .invoice-box {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 12px;
     }
     .header {
         flex-direction: column;
@@ -325,34 +341,7 @@ td input[type="number"] {
     }
     .header .company-name {
         text-align: center;
-        margin-bottom: 8px;
-    }
-    .download-btn {
-        position: static;
-        text-align: center;
-        margin-bottom: 15px;
-        flex-direction: column;
-        gap: 8px;
-    }
-    table {
-        font-size: 12px;
-    }
-    th, td {
-        padding: 8px;
-    }
-    td input[type="number"] {
-        width: 80%;
-    }
-    .product-name-col, .description-col {
-        width: auto; /* Flexible for smaller screens */
-    }
-}
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    .invoice-box {
-        font-size: 12px;
+        margin-bottom: 6px;
     }
     .header .company-name input {
         font-size: 16px;
@@ -360,28 +349,58 @@ td input[type="number"] {
     .header .invoice-title {
         font-size: 18px;
     }
+    .info-section {
+        gap: 4px;
+    }
+    .info-box {
+        padding: 6px;
+        margin-bottom: 4px;
+    }
     .info-box p, .info-box input, .info-box textarea {
-        font-size: 11px;
+        font-size: 10px;
+    }
+    .info-box textarea {
+        height: 30px;
+    }
+    table {
+        font-size: 10px;
+    }
+    th, td {
+        padding: 4px;
+    }
+    td input[type="text"], td input[type="number"] {
+        font-size: 10px;
+        padding: 3px;
+    }
+    .totals-box {
+        padding: 6px;
     }
     .totals-box p, .totals-box input, .totals-box span {
-        font-size: 11px;
+        font-size: 10px;
     }
     .note-textarea {
-        height: 60px;
+        height: 40px;
+    }
+    .download-btn .btn, .color-select {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 }
+
+/* Print Styles */
 @media print {
     body {
         padding: 0;
-        transform: scale(1);
         width: 100%;
     }
     .invoice-box {
         border: none;
         padding: 0;
-        font-size: 12px;
-        width: 8.27in; /* A4 width */
+        font-size: 10px;
+        width: 8.27in;
         max-width: 8.27in;
+        height: auto;
+        box-shadow: none;
     }
     .download-btn {
         display: none;
@@ -393,25 +412,39 @@ td input[type="number"] {
         border: none !important;
         background: transparent !important;
         padding: 0 !important;
-        font-size: 12px !important;
+        font-size: 10px !important;
     }
     .header .company-name input, .header .invoice-title {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
     th, td, .info-box p, .totals-box p, .totals-box span {
-        font-size: 12px !important;
+        font-size: 10px !important;
     }
     .info-box, .totals-box {
-        padding: 10px !important;
+        padding: 4px !important;
+    }
+    .info-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .info-box {
+        flex: 1 1 30%;
+        padding: 4px !important;
     }
     .note-textarea {
-        height: 60px !important;
+        height: 30px !important;
     }
-    .product-name-col { width: 25%; }
-    .description-col { width: 35%; }
-    .quantity-col { width: 10%; }
-    .unit-price-col { width: 10%; }
-    .discount-col { width: 10%; }
-    .price-col { width: 10%; }
+    .product-name-col { width: 28%; }
+    .description-col { width: 32%; }
+    .quantity-col, .unit-price-col, .discount-col, .price-col {
+        width: 8%;
+    }
     .action-col { display: none; }
+    table, th, td {
+        padding: 4px !important;
+    }
+    .totals-section, .section {
+        margin-top: 8px !important;
+    }
 }

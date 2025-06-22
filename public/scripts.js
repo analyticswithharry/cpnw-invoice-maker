@@ -3,7 +3,7 @@ function formatAsCurrency(amount) {
 }
 
 function calculatePrice(row) {
-    const quantity = parseFloat(row.querySelector('.quantity').value) || 1; // Default to 1
+    const quantity = parseFloat(row.querySelector('.quantity').value) || 1;
     const unitPrice = parseFloat(row.querySelector('.unit-price').value) || 0;
     const discount = parseFloat(row.querySelector('.discount').value) || 0;
     const price = (quantity * unitPrice) - discount;
@@ -68,23 +68,23 @@ function applyColorPreset() {
 }
 
 function downloadPDF() {
+    const clientName = document.getElementById('clientName').value.replace(/[^a-zA-Z0-9]/g, '_') || 'invoice';
+    const invoiceDate = document.getElementById('invoiceDate').value || '2025-06-07';
+    const now = new Date();
+    const time = now.toTimeString().split(' ')[0].replace(/:/g, '-');
+    const filename = `${clientName}_${invoiceDate}_${time}.pdf`;
     const element = document.getElementById('invoice');
     const opt = {
-        margin: [0.2, 0.2, 0.2, 0.2],
-        filename: 'product-invoice.pdf',
+        margin: [0.1, 0.1, 0.1, 0.1],
+        filename: filename,
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
         pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
-    document.body.style.transform = 'scale(1)';
-    document.body.style.width = '100%';
-    html2pdf().set(opt).from(element).save().then(() => {
-        document.body.style.transform = 'scale(1.2)';
-        document.body.style.width = '83.33%';
-    });
+    html2pdf().set(opt).from(element).save();
 }
 
 document.querySelectorAll('.item-row').forEach(row => attachEventListeners(row));
 document.getElementById('taxRate').addEventListener('input', calculateTotal);
-applyColorPreset(); // Initialize default color
+applyColorPreset();
