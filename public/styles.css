@@ -1,93 +1,88 @@
 body {
     font-family: 'Arial', 'Helvetica', sans-serif;
     margin: 0;
-    padding: 5vw;
+    padding: 20px;
     background-color: #e6edf3;
     color: #000000;
     line-height: 1.4;
-    font-size: calc(12px + 0.5vw); /* Scales with viewport */
 }
 .invoice-box {
-    max-width: min(900px, 95vw); /* Wider but responsive */
+    max-width: 100%;
+    width: 900px; /* Wide for large screens */
     margin: 0 auto;
-    padding: min(20px, 4vw);
+    padding: 20px;
     border: 1px solid #d3e0ea;
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
+    font-size: 14px;
 }
 .header {
-    margin-bottom: min(20px, 4vw);
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #2b6cb0;
-    padding-bottom: min(8px, 2vw);
+    padding-bottom: 8px;
 }
 .header .company-name {
-    font-size: calc(16px + 0.8vw);
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
 }
 .header .company-name input {
     border: none;
-    font-size: calc(16px + 0.8vw);
+    font-size: 20px;
     font-weight: bold;
     color: #000000;
     text-align: left;
     width: 100%;
 }
 .header .invoice-title {
-    font-size: calc(18px + 1vw);
+    font-size: 24px;
     font-weight: normal;
     text-align: center;
     flex: 1;
 }
 .info-section {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: min(20px, 4vw);
-    gap: min(10px, 2vw);
+    margin-bottom: 20px;
+    gap: 10px;
 }
 .info-box {
-    flex: 1 1 min(250px, 30vw);
-    padding: min(12px, 2.5vw);
+    flex: 1;
+    padding: 12px;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
 .info-box p {
     margin: 0;
-    font-size: calc(11px + 0.4vw);
-    margin-bottom: min(5px, 1vw);
+    font-size: 13px;
+    margin-bottom: 5px;
     font-weight: normal;
 }
 .info-box input, .info-box textarea {
     width: 100%;
-    padding: min(5px, 1vw);
+    padding: 5px;
     border: 1px solid #d3e0ea;
-    font-size: calc(11px + 0.4vw);
+    font-size: 13px;
     color: #000000;
-    margin-bottom: min(12px, 2.5vw);
+    margin-bottom: 12px;
     box-sizing: border-box;
 }
 .info-box textarea {
-    height: min(50px, 10vw);
+    height: 50px;
     resize: none;
-}
-.table-wrapper {
-    overflow-x: auto; /* Horizontal scroll on small screens */
-    width: 100%;
 }
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: min(20px, 4vw);
+    margin-bottom: 20px;
     border: 1px solid #d3e0ea;
-    min-width: 600px; /* Ensures table width for readability */
 }
 th, td {
-    padding: min(10px, 2vw);
+    padding: 10px;
     text-align: left;
     border: 1px solid #d3e0ea;
 }
@@ -95,40 +90,40 @@ th {
     background-color: #2b6cb0;
     color: #ffffff;
     font-weight: normal;
-    font-size: calc(11px + 0.4vw);
+    font-size: 13px;
 }
 td {
-    font-size: calc(11px + 0.4vw);
+    font-size: 13px;
     background-color: #f9fcff;
 }
 td input[type="text"] {
     width: 100%;
     border: none;
-    padding: min(5px, 1vw);
-    font-size: calc(11px + 0.4vw);
+    padding: 5px;
+    font-size: 13px;
     color: #000000;
 }
 td input[type="number"] {
-    width: 50%;
+    width: 100%; /* Full width for better visibility */
     border: none;
-    padding: min(5px, 1vw);
-    font-size: calc(11px + 0.4vw);
+    padding: 5px;
+    font-size: 13px;
     color: #000000;
 }
 .product-name-col {
-    width: 20%;
+    width: 25%; /* Wider for better visibility */
 }
 .description-col {
-    width: 30%;
+    width: 35%; /* Wider for better visibility */
 }
 .quantity-col {
     width: 10%;
 }
 .unit-price-col {
-    width: 15%;
+    width: 10%;
 }
 .discount-col {
-    width: 15%;
+    width: 10%;
 }
 .price-col {
     width: 10%;
@@ -137,13 +132,13 @@ td input[type="number"] {
     width: 10%;
 }
 .btn {
-    padding: min(8px, 1.5vw) min(15px, 3vw);
+    padding: 8px 15px;
     background-color: #2b6cb0;
     color: #ffffff;
     border: none;
     cursor: pointer;
-    font-size: calc(11px + 0.4vw);
-    margin: min(5px, 1vw) 0;
+    font-size: 13px;
+    margin: 5px 0;
     transition: background-color 0.2s ease;
 }
 .btn:hover {
@@ -156,66 +151,66 @@ td input[type="number"] {
     background-color: #c53030;
 }
 .totals-section {
-    margin-top: min(20px, 4vw);
+    margin-top: 20px;
 }
 .totals-box {
-    padding: min(12px, 2.5vw);
+    padding: 12px;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
 .totals-box p {
     margin: 0;
-    font-size: calc(11px + 0.4vw);
-    margin-bottom: min(5px, 1vw);
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 .totals-box input, .totals-box span {
     width: 100%;
-    padding: min(5px, 1vw);
+    padding: 5px;
     border: 1px solid #d3e0ea;
-    font-size: calc(11px + 0.4vw);
+    font-size: 13px;
     color: #000000;
-    margin-bottom: min(12px, 2.5vw);
+    margin-bottom: 12px;
     box-sizing: border-box;
 }
 .totals-box input[type="number"] {
-    width: min(50px, 10vw);
+    width: 50px;
     border: 1px solid #d3e0ea;
 }
 .totals-box span {
     border: none;
-    padding: min(5px, 1vw) 0;
+    padding: 5px 0;
 }
 .totals-box .subtotal-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: min(12px, 2.5vw);
+    margin-bottom: 12px;
 }
 .totals-box .subtotal-row p {
     margin: 0;
-    font-size: calc(11px + 0.4vw);
+    font-size: 13px;
     flex: 0 0 50%;
     text-align: right;
-    padding-right: min(10px, 2vw);
+    padding-right: 10px;
 }
 .totals-box .subtotal-row span {
     flex: 1;
     text-align: left;
-    padding: min(5px, 1vw) 0;
+    padding: 5px 0;
     margin-bottom: 0;
 }
 .totals-box .tax-rate-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: min(12px, 2.5vw);
+    margin-bottom: 12px;
 }
 .totals-box .tax-rate-row p {
     margin: 0;
-    font-size: calc(11px + 0.4vw);
+    font-size: 13px;
     flex: 0 0 50%;
     text-align: right;
-    padding-right: min(10px, 2vw);
+    padding-right: 10px;
 }
 .totals-box .tax-rate-row .tax-rate-container {
     display: flex;
@@ -223,9 +218,21 @@ td input[type="number"] {
     flex: 1;
 }
 .totals-box .tax-rate-row input {
-    width: min(50px, 10vw);
+    width: 90px;
     margin-bottom: 0;
-    margin-right: min(5px, 1vw);
+    margin-right: 5px;
+    padding: 8px 10px;
+    border: 1.5px solid #4a90e2;
+    background-color: #eaf4fb;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: border-color 0.2s;
+}
+.totals-box .tax-rate-row input:focus {
+    border-color: #2b6cb0;
+    outline: none;
+    background-color: #d6eafd;
 }
 .totals-box .tax-rate-row span {
     margin-bottom: 0;
@@ -234,35 +241,35 @@ td input[type="number"] {
 }
 .note-textarea {
     width: 100%;
-    height: min(80px, 15vw);
-    padding: min(5px, 1vw);
+    height: 80px;
+    padding: 5px;
     border: 1px solid #d3e0ea;
-    font-size: calc(11px + 0.4vw);
+    font-size: 13px;
     color: #000000;
-    margin-bottom: min(12px, 2.5vw);
+    margin-bottom: 12px;
     resize: vertical;
     box-sizing: border-box;
 }
 .download-btn {
     position: absolute;
-    top: min(40px, 8vw);
-    right: min(40px, 8vw);
+    top: 20px;
+    right: 20px;
     z-index: 1000;
     display: flex;
-    gap: min(10px, 2vw);
+    gap: 10px;
     align-items: center;
 }
 .download-btn .btn {
     background-color: #4a90e2;
-    padding: min(10px, 2vw) min(20px, 4vw);
-    font-size: calc(12px + 0.5vw);
+    padding: 10px 20px;
+    font-size: 14px;
 }
 .download-btn .btn:hover {
     background-color: #357abd;
 }
 .color-select {
-    padding: min(8px, 1.5vw);
-    font-size: calc(12px + 0.5vw);
+    padding: 8px;
+    font-size: 14px;
     border: 1px solid #d3e0ea;
     border-radius: 4px;
     background-color: #ffffff;
@@ -299,47 +306,68 @@ td input[type="number"] {
 .color-orange .info-box, .color-orange .totals-box { border-color: #f6ad55; }
 .color-orange .download-btn .btn { background-color: #f6ad55; }
 .color-orange .download-btn .btn:hover { background-color: #ed8936; }
-@media (max-width: 768px) {
-    body {
-        padding: 3vw;
-    }
+
+@media (max-width: 900px) {
     .invoice-box {
-        max-width: 100%;
+        width: 100%;
+        padding: 15px;
     }
     .info-section {
         flex-direction: column;
+        gap: 8px;
     }
     .info-box {
-        flex: 1 1 100%;
-        margin-bottom: min(10px, 2vw);
+        margin-bottom: 8px;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header .company-name {
+        text-align: center;
+        margin-bottom: 8px;
     }
     .download-btn {
         position: static;
         text-align: center;
-        margin-bottom: min(20px, 4vw);
+        margin-bottom: 15px;
         flex-direction: column;
-        gap: min(10px, 2vw);
-    }
-    .table-wrapper {
-        max-width: 100%;
-        overflow-x: auto;
+        gap: 8px;
     }
     table {
-        min-width: 100%; /* Adjust table to fit smaller screens */
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px;
+    }
+    td input[type="number"] {
+        width: 80%;
+    }
+    .product-name-col, .description-col {
+        width: auto; /* Flexible for smaller screens */
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     body {
-        font-size: calc(10px + 0.5vw);
+        padding: 10px;
     }
-    .header .company-name input, .header .invoice-title {
-        font-size: calc(14px + 0.8vw);
+    .invoice-box {
+        font-size: 12px;
     }
-    .info-box p, .info-box input, .info-box textarea, th, td, .totals-box p, .totals-box input, .totals-box span {
-        font-size: calc(10px + 0.4vw);
+    .header .company-name input {
+        font-size: 16px;
     }
-    .btn, .color-select {
-        font-size: calc(10px + 0.5vw);
+    .header .invoice-title {
+        font-size: 18px;
+    }
+    .info-box p, .info-box input, .info-box textarea {
+        font-size: 11px;
+    }
+    .totals-box p, .totals-box input, .totals-box span {
+        font-size: 11px;
+    }
+    .note-textarea {
+        height: 60px;
     }
 }
 @media print {
@@ -352,6 +380,7 @@ td input[type="number"] {
         border: none;
         padding: 0;
         font-size: 12px;
+        width: 8.27in; /* A4 width */
         max-width: 8.27in;
     }
     .download-btn {
@@ -378,20 +407,11 @@ td input[type="number"] {
     .note-textarea {
         height: 60px !important;
     }
-    .product-name-col { width: 20%; }
-    .description-col { width: 30%; }
+    .product-name-col { width: 25%; }
+    .description-col { width: 35%; }
     .quantity-col { width: 10%; }
-    .unit-price-col { width: 15%; }
-    .discount-col { width: 15%; }
+    .unit-price-col { width: 10%; }
+    .discount-col { width: 10%; }
     .price-col { width: 10%; }
     .action-col { display: none; }
-    .info-section {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-    .info-box {
-        flex: 1 1 30%;
-        margin-bottom: 0;
-    }
 }
