@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 1.5rem;
+    padding: 1rem;
     background-color: #e6edf3;
     color: #000;
     line-height: 1.4;
@@ -11,13 +11,13 @@ body {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: flex-start;
 }
 
 .invoice-box {
     flex: 3;
-    padding: 1.5rem;
+    padding: 1rem;
     border: 1px solid #d3e0ea;
     background-color: #fff;
     border-radius: 8px;
@@ -30,76 +30,76 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #2b6cb0;
-    padding-bottom: 0.75rem;
-    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 #logo {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 80px;
+    max-height: 80px;
     display: none;
 }
 
 .company-name input {
     border: none;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #000;
 }
 
 .invoice-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: normal;
 }
 
 .info-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .info-box {
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
 
 .info-box p {
     margin: 0;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
 }
 
 .info-box input, .info-box textarea {
     width: 100%;
-    padding: 0.3rem;
+    padding: 0.2rem;
     border: 1px solid #d3e0ea;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     box-sizing: border-box;
 }
 
 .info-box textarea {
-    height: 2.5rem;
+    height: 2rem;
     resize: none;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     border: 1px solid #d3e0ea;
     table-layout: fixed;
 }
 
 th, td {
-    padding: 0.5rem;
+    padding: 0.3rem;
     text-align: left;
     border: 1px solid #d3e0ea;
 }
@@ -108,19 +108,19 @@ th {
     background-color: #2b6cb0;
     color: #fff;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 td {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     background-color: #f9fcff;
 }
 
 td input {
     width: 100%;
     border: none;
-    padding: 0.3rem;
-    font-size: 0.9rem;
+    padding: 0.2rem;
+    font-size: 0.85rem;
 }
 
 .product-name-col { width: 20%; }
@@ -128,13 +128,13 @@ td input {
 .quantity-col, .unit-price-col, .discount-col, .price-col { width: 15%; }
 
 .btn {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     background-color: #2b6cb0;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
+    font-size: 0.85rem;
+    margin: 0.2rem 0;
     border-radius: 4px;
 }
 
@@ -151,42 +151,42 @@ td input {
 }
 
 .totals-section {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 }
 
 .totals-box {
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
 
 .totals-box p {
     margin: 0;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
 }
 
 .totals-box span {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border: none;
-    padding: 0.3rem 0;
+    padding: 0.2rem 0;
 }
 
 .totals-box input[type="number"] {
-    width: 3rem;
+    width: 2.5rem;
 }
 
 .subtotal-row, .tax-rate-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .subtotal-row p, .tax-rate-row p {
     flex: 0 0 50%;
     text-align: right;
-    padding-right: 0.5rem;
+    padding-right: 0.3rem;
 }
 
 .tax-rate-container {
@@ -197,28 +197,28 @@ td input {
 
 .note-textarea {
     width: 100%;
-    height: 3rem;
-    padding: 0.3rem;
+    height: 2.5rem;
+    padding: 0.2rem;
     border: 1px solid #d3e0ea;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     resize: vertical;
 }
 
 .button-container {
     flex: 1;
-    padding: 1.5rem;
+    padding: 1rem;
     background-color: #fff;
     border: 1px solid #d3e0ea;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .color-select {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.4rem;
+    font-size: 0.85rem;
     border: 1px solid #d3e0ea;
     border-radius: 4px;
     cursor: pointer;
@@ -250,6 +250,59 @@ td input {
 .color-orange .info-box, .color-orange .totals-box { border-color: #f6ad55; }
 
 @media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+    .main-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .invoice-box, .button-container {
+        padding: 0.75rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .info-section {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .info-box p, .info-box input, .info-box textarea, td, th, .totals-box p, .totals-box span {
+        font-size: 0.8rem;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header .company-name input {
+        font-size: 1rem;
+    }
+    .invoice-title {
+        font-size: 1.1rem;
+    }
+    th, td {
+        padding: 0.2rem;
+    }
+    table {
+        font-size: 0.75rem;
+    }
+    .totals-box input[type="number"] {
+        width: 2rem;
+    }
+    .note-textarea {
+        height: 2rem;
+    }
+    .btn, .color-select {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    #logo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
     .main-container {
         flex-direction: column;
     }
@@ -257,28 +310,17 @@ td input {
         padding: 1rem;
     }
     .info-section {
-        grid-template-columns: 1fr;
-    }
-    .info-box p, .info-box input, .info-box textarea, td, th, .totals-box p, .totals-box span {
-        font-size: 0.8rem;
-    }
-    .header .company-name input { font-size: 1rem; }
-    .invoice-title { font-size: 1.25rem; }
-    th, td { padding: 0.3rem; }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .main-container {
-        flex-direction: column;
-    }
-    .info-section {
         grid-template-columns: repeat(2, 1fr);
     }
     .info-box p, .info-box input, .info-box textarea, td, th, .totals-box p, .totals-box span {
         font-size: 0.85rem;
     }
-    .header .company-name input { font-size: 1.1rem; }
-    .invoice-title { font-size: 1.35rem; }
+    .header .company-name input {
+        font-size: 1.1rem;
+    }
+    .invoice-title {
+        font-size: 1.35rem;
+    }
 }
 
 @media (min-width: 1025px) {
