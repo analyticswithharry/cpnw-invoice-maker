@@ -1,450 +1,338 @@
 body {
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 1.5rem;
     background-color: #e6edf3;
-    color: #000000;
+    color: #000;
     line-height: 1.4;
 }
-.invoice-box {
-    max-width: 900px;
-    width: 100%;
+
+.main-container {
+    display: flex;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 15px;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.invoice-box {
+    flex: 3;
+    padding: 1.5rem;
     border: 1px solid #d3e0ea;
-    background-color: #ffffff;
+    background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
-    font-size: 14px;
 }
+
 .header {
-    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #2b6cb0;
-    padding-bottom: 8px;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
-.header .company-name {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
-}
-.header .company-name input {
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000000;
-    text-align: left;
-    width: 100%;
-}
-.header .invoice-title {
-    font-size: 24px;
-    font-weight: normal;
-    text-align: center;
-    flex: 1;
-}
-.info-section {
+
+.header-left {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    gap: 8px;
+    align-items: center;
+    gap: 0.75rem;
 }
+
+#logo {
+    max-width: 100px;
+    max-height: 100px;
+    display: none;
+}
+
+.company-name input {
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.invoice-title {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
 .info-box {
-    flex: 1;
-    padding: 10px;
+    padding: 0.75rem;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
+
 .info-box p {
     margin: 0;
-    font-size: 12px;
-    margin-bottom: 4px;
-    font-weight: normal;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
 }
+
 .info-box input, .info-box textarea {
     width: 100%;
-    padding: 5px;
+    padding: 0.3rem;
     border: 1px solid #d3e0ea;
-    font-size: 12px;
-    color: #000000;
-    margin-bottom: 8px;
+    font-size: 0.9rem;
     box-sizing: border-box;
 }
+
 .info-box textarea {
-    height: 40px;
+    height: 2.5rem;
     resize: none;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     border: 1px solid #d3e0ea;
+    table-layout: fixed;
 }
+
 th, td {
-    padding: 8px;
+    padding: 0.5rem;
     text-align: left;
     border: 1px solid #d3e0ea;
 }
+
 th {
     background-color: #2b6cb0;
-    color: #ffffff;
+    color: #fff;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.9rem;
 }
+
 td {
-    font-size: 12px;
+    font-size: 0.9rem;
     background-color: #f9fcff;
 }
-td input[type="text"], td input[type="number"] {
+
+td input {
     width: 100%;
     border: none;
-    padding: 5px;
-    font-size: 12px;
-    color: #000000;
-    box-sizing: border-box;
+    padding: 0.3rem;
+    font-size: 0.9rem;
 }
-.product-name-col {
-    width: 28%;
-}
-.description-col {
-    width: 32%;
-}
-.quantity-col, .unit-price-col, .discount-col, .price-col {
-    width: 8%;
-}
-.action-col {
-    width: 8%;
-}
+
+.product-name-col { width: 20%; }
+.description-col { width: 35%; }
+.quantity-col, .unit-price-col, .discount-col, .price-col { width: 15%; }
+
 .btn {
-    padding: 8px 15px;
+    padding: 0.5rem 1rem;
     background-color: #2b6cb0;
-    color: #ffffff;
+    color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 12px;
-    margin: 5px 0;
-    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    border-radius: 4px;
 }
+
 .btn:hover {
     background-color: #1c4d82;
 }
+
 .btn-remove {
     background-color: #e53e3e;
 }
+
 .btn-remove:hover {
     background-color: #c53030;
 }
+
 .totals-section {
-    margin-top: 15px;
+    margin-top: 1rem;
 }
+
 .totals-box {
-    padding: 10px;
+    padding: 0.75rem;
     border: 2px solid #4a90e2;
     background-color: #f9fcff;
 }
+
 .totals-box p {
     margin: 0;
-    font-size: 12px;
-    margin-bottom: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
 }
-.totals-box input, .totals-box span {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #d3e0ea;
-    font-size: 12px;
-    color: #000000;
-    margin-bottom: 8px;
-    box-sizing: border-box;
-}
-.totals-box input[type="number"] {
-    width: 50px;
-}
+
 .totals-box span {
+    font-size: 0.9rem;
     border: none;
-    padding: 5px 0;
+    padding: 0.3rem 0;
 }
-.totals-box .subtotal-row {
+
+.totals-box input[type="number"] {
+    width: 3rem;
+}
+
+.subtotal-row, .tax-rate-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
-.totals-box .subtotal-row p {
-    margin: 0;
-    font-size: 12px;
+
+.subtotal-row p, .tax-rate-row p {
     flex: 0 0 50%;
     text-align: right;
-    padding-right: 8px;
+    padding-right: 0.5rem;
 }
-.totals-box .subtotal-row span {
-    flex: 1;
-    text-align: left;
-    padding: 5px 0;
-    margin-bottom: 0;
-}
-.totals-box .tax-rate-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-}
-.totals-box .tax-rate-row p {
-    margin: 0;
-    font-size: 12px;
-    flex: 0 0 50%;
-    text-align: right;
-    padding-right: 8px;
-}
-.totals-box .tax-rate-row .tax-rate-container {
+
+.tax-rate-container {
     display: flex;
     align-items: center;
     flex: 1;
 }
-.totals-box .tax-rate-row input {
-    width: 50px;
-    margin-bottom: 0;
-    margin-right: 5px;
-}
-.totals-box .tax-rate-row span {
-    margin-bottom: 0;
-    border: none;
-    padding: 0;
-}
+
 .note-textarea {
     width: 100%;
-    height: 50px;
-    padding: 5px;
+    height: 3rem;
+    padding: 0.3rem;
     border: 1px solid #d3e0ea;
-    font-size: 12px;
-    color: #000000;
-    margin-bottom: 8px;
+    font-size: 0.9rem;
     resize: vertical;
-    box-sizing: border-box;
 }
-.download-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+
+.button-container {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #d3e0ea;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
-    gap: 10px;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
 }
-.download-btn .btn {
-    background-color: #4a90e2;
-    padding: 10px 20px;
-    font-size: 14px;
-}
-.download-btn .btn:hover {
-    background-color: #357abd;
-}
+
 .color-select {
-    padding: 8px;
-    font-size: 14px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
     border: 1px solid #d3e0ea;
     border-radius: 4px;
-    background-color: #ffffff;
     cursor: pointer;
 }
+
+#logoSize {
+    width: 100%;
+}
+
 .color-blue .header { border-bottom-color: #2b6cb0; }
 .color-blue th { background-color: #2b6cb0; }
 .color-blue .btn { background-color: #2b6cb0; }
 .color-blue .btn:hover { background-color: #1c4d82; }
 .color-blue .info-box, .color-blue .totals-box { border-color: #4a90e2; }
-.color-blue .download-btn .btn { background-color: #4a90e2; }
-.color-blue .download-btn .btn:hover { background-color: #357abd; }
 .color-green .header { border-bottom-color: #2f855a; }
 .color-green th { background-color: #2f855a; }
 .color-green .btn { background-color: #2f855a; }
 .color-green .btn:hover { background-color: #276749; }
 .color-green .info-box, .color-green .totals-box { border-color: #48bb78; }
-.color-green .download-btn .btn { background-color: #48bb78; }
-.color-green .download-btn .btn:hover { background-color: #38a169; }
 .color-purple .header { border-bottom-color: #6b46c1; }
 .color-purple th { background-color: #6b46c1; }
 .color-purple .btn { background-color: #6b46c1; }
 .color-purple .btn:hover { background-color: #553c9a; }
 .color-purple .info-box, .color-purple .totals-box { border-color: #9f7aea; }
-.color-purple .download-btn .btn { background-color: #9f7aea; }
-.color-purple .download-btn .btn:hover { background-color: #805ad5; }
 .color-orange .header { border-bottom-color: #dd6b20; }
 .color-orange th { background-color: #dd6b20; }
 .color-orange .btn { background-color: #dd6b20; }
 .color-orange .btn:hover { background-color: #c05621; }
 .color-orange .info-box, .color-orange .totals-box { border-color: #f6ad55; }
-.color-orange .download-btn .btn { background-color: #f6ad55; }
-.color-orange .download-btn .btn:hover { background-color: #ed8936; }
 
-/* Tablet and Mobile View */
 @media (max-width: 768px) {
-    .invoice-box {
-        max-width: 700px;
-        padding: 12px;
-        font-size: 13px;
+    .main-container {
+        flex-direction: column;
     }
-    .header .company-name input {
-        font-size: 18px;
-    }
-    .header .invoice-title {
-        font-size: 20px;
+    .invoice-box, .button-container {
+        padding: 1rem;
     }
     .info-section {
+        grid-template-columns: 1fr;
+    }
+    .info-box p, .info-box input, .info-box textarea, td, th, .totals-box p, .totals-box span {
+        font-size: 0.8rem;
+    }
+    .header .company-name input { font-size: 1rem; }
+    .invoice-title { font-size: 1.25rem; }
+    th, td { padding: 0.3rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-container {
         flex-direction: column;
-        gap: 6px;
     }
-    .info-box {
-        margin-bottom: 6px;
-        padding: 8px;
+    .info-section {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .info-box p, .info-box input, .info-box textarea {
-        font-size: 11px;
+    .info-box p, .info-box input, .info-box textarea, td, th, .totals-box p, .totals-box span {
+        font-size: 0.85rem;
     }
-    table {
-        font-size: 11px;
-    }
-    th, td {
-        padding: 6px;
-    }
-    .action-col, .btn-remove {
-        display: none; /* Hide Remove button on tablet/mobile */
-    }
-    .totals-box p, .totals-box input, .totals-box span {
-        font-size: 11px;
-    }
-    .download-btn {
-        position: static;
-        text-align: center;
-        margin-bottom: 12px;
-        flex-direction: column;
-        gap: 6px;
-    }
-    .download-btn .btn, .color-select {
-        font-size: 13px;
-        padding: 8px 15px;
+    .header .company-name input { font-size: 1.1rem; }
+    .invoice-title { font-size: 1.35rem; }
+}
+
+@media (min-width: 1025px) {
+    .info-section {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Mobile View */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    .invoice-box {
-        max-width: 100%;
-        padding: 10px;
-        font-size: 12px;
-    }
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-    .header .company-name {
-        text-align: center;
-        margin-bottom: 6px;
-    }
-    .header .company-name input {
-        font-size: 16px;
-    }
-    .header .invoice-title {
-        font-size: 18px;
-    }
-    .info-section {
-        gap: 4px;
-    }
-    .info-box {
-        padding: 6px;
-        margin-bottom: 4px;
-    }
-    .info-box p, .info-box input, .info-box textarea {
-        font-size: 10px;
-    }
-    .info-box textarea {
-        height: 30px;
-    }
-    table {
-        font-size: 10px;
-    }
-    th, td {
-        padding: 4px;
-    }
-    td input[type="text"], td input[type="number"] {
-        font-size: 10px;
-        padding: 3px;
-    }
-    .totals-box {
-        padding: 6px;
-    }
-    .totals-box p, .totals-box input, .totals-box span {
-        font-size: 10px;
-    }
-    .note-textarea {
-        height: 40px;
-    }
-    .download-btn .btn, .color-select {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-}
-
-/* Print Styles */
 @media print {
     body {
         padding: 0;
         width: 100%;
     }
+    .button-container, .btn {
+        display: none !important;
+    }
     .invoice-box {
         border: none;
         padding: 0;
-        font-size: 10px;
-        width: 8.27in;
-        max-width: 8.27in;
-        height: auto;
+        width: 210mm;
+        max-width: 210mm;
         box-shadow: none;
-    }
-    .download-btn {
-        display: none;
-    }
-    .btn, .btn-remove {
-        display: none;
     }
     input, textarea {
         border: none !important;
         background: transparent !important;
         padding: 0 !important;
-        font-size: 10px !important;
+        font-size: 0.6rem !important;
     }
-    .header .company-name input, .header .invoice-title {
-        font-size: 16px !important;
+    .header .company-name input, .invoice-title {
+        font-size: 0.9rem !important;
     }
     th, td, .info-box p, .totals-box p, .totals-box span {
-        font-size: 10px !important;
+        font-size: 0.6rem !important;
     }
     .info-box, .totals-box {
-        padding: 4px !important;
+        padding: 0.25rem !important;
     }
     .info-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-    }
-    .info-box {
-        flex: 1 1 30%;
-        padding: 4px !important;
+        gap: 0.25rem;
     }
     .note-textarea {
-        height: 30px !important;
+        height: 1.5rem !important;
     }
-    .product-name-col { width: 28%; }
-    .description-col { width: 32%; }
+    .product-name-col { width: 20%; }
+    .description-col { width: 35%; }
     .quantity-col, .unit-price-col, .discount-col, .price-col {
-        width: 10%;
+        width: 15%;
     }
-    .action-col { display: none; }
     table, th, td {
-        padding: 4px !important;
+        padding: 0.25rem !important;
     }
-    .totals-section, .section {
-        margin-top: 8px !important;
+    #logo {
+        max-width: 50px !important;
+        max-height: 50px !important;
     }
 }
