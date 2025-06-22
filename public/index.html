@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product-Based Invoice Generator</title>
+    <title>Analytics with Harry</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -61,39 +61,41 @@
             </div>
         </div>
         <div class="section">
-            <table id="itemsTable">
-                <thead>
-                    <tr>
-                        <th class="product-name-col">Product Name</th>
-                        <th class="description-col">Description</th>
-                        <th class="quantity-col">Quantity</th>
-                        <th class="unit-price-col">Unit Price</th>
-                        <th class="discount-col">Discount</th>
-                        <th class="price-col">Price</th>
-                        <th class="action-col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="item-row">
-                        <td><input type="text" class="product-name" value="Product A"></td>
-                        <td><input type="text" class="description" value="High-quality widget"></td>
-                        <td><input type="number" class="quantity" value="2" min="1"></td>
-                        <td><input type="number" class="unit-price" value="900.00" min="0" step="0.01"></td>
-                        <td><input type="number" class="discount" value="0.00" min="0" step="0.01"></td>
-                        <td class="price">$1800.00</td>
-                        <td><button class="btn btn-remove" onclick="removeRow(this)">Remove</button></td>
-                    </tr>
-                    <tr class="item-row">
-                        <td><input type="text" class="product-name" value="Product B"></td>
-                        <td><input type="text" class="description" value="Premium gadget"></td>
-                        <td><input type="number" class="quantity" value="1" min="1"></td>
-                        <td><input type="number" class="unit-price" value="500.00" min="0" step="0.01"></td>
-                        <td><input type="number" class="discount" value="0.00" min="0" step="0.01"></td>
-                        <td class="price">$500.00</td>
-                        <td><button class="btn btn-remove" onclick="removeRow(this)">Remove</button></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table id="itemsTable">
+                    <thead>
+                        <tr>
+                            <th class="product-name-col">Product Name</th>
+                            <th class="description-col">Description</th>
+                            <th class="quantity-col">Quantity</th>
+                            <th class="unit-price-col">Unit Price</th>
+                            <th class="discount-col">Discount</th>
+                            <th class="price-col">Price</th>
+                            <th class="action-col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="item-row">
+                            <td><input type="text" class="product-name" value="Product A"></td>
+                            <td><input type="text" class="description" value="High-quality widget"></td>
+                            <td><input type="number" class="quantity" value="2" min="1"></td>
+                            <td><input type="number" class="unit-price" value="900.00" min="0" step="0.01"></td>
+                            <td><input type="number" class="discount" value="0.00" min="0" step="0.01"></td>
+                            <td class="price">$1800.00</td>
+                            <td><button class="btn btn-remove" onclick="removeRow(this)">Remove</button></td>
+                        </tr>
+                        <tr class="item-row">
+                            <td><input type="text" class="product-name" value="Product B"></td>
+                            <td><input type="text" class="description" value="Premium gadget"></td>
+                            <td><input type="number" class="quantity" value="1" min="1"></td>
+                            <td><input type="number" class="unit-price" value="500.00" min="0" step="0.01"></td>
+                            <td><input type="number" class="discount" value="0.00" min="0" step="0.01"></td>
+                            <td class="price">$500.00</td>
+                            <td><button class="btn btn-remove" onclick="removeRow(this)">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <button class="btn" onclick="addRow()">Add Product</button>
         </div>
         <div class="totals-section">
