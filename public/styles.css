@@ -105,10 +105,10 @@ td input[type="text"], td input[type="number"] {
     box-sizing: border-box;
 }
 .product-name-col {
-    width: 28%; /* Wider for clarity */
+    width: 28%;
 }
 .description-col {
-    width: 32%; /* Wider for clarity */
+    width: 32%;
 }
 .quantity-col, .unit-price-col, .discount-col, .price-col {
     width: 8%;
@@ -276,7 +276,7 @@ td input[type="text"], td input[type="number"] {
 .color-orange .download-btn .btn { background-color: #f6ad55; }
 .color-orange .download-btn .btn:hover { background-color: #ed8936; }
 
-/* Tablet View */
+/* Tablet and Mobile View */
 @media (max-width: 768px) {
     .invoice-box {
         max-width: 700px;
@@ -306,8 +306,8 @@ td input[type="text"], td input[type="number"] {
     th, td {
         padding: 6px;
     }
-    .product-name-col, .description-col {
-        width: auto;
+    .action-col, .btn-remove {
+        display: none; /* Hide Remove button on tablet/mobile */
     }
     .totals-box p, .totals-box input, .totals-box span {
         font-size: 11px;
@@ -438,7 +438,7 @@ td input[type="text"], td input[type="number"] {
     .product-name-col { width: 28%; }
     .description-col { width: 32%; }
     .quantity-col, .unit-price-col, .discount-col, .price-col {
-        width: 8%;
+        width: 10%;
     }
     .action-col { display: none; }
     table, th, td {
