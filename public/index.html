@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Based Invoice Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="download-btn">
+        <button class="btn" onclick="downloadPDF()">Download as PDF</button>
+        <select id="colorPreset" class="color-select" onchange="applyColorPreset()">
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+        </select>
+    </div>
+    <div class="invoice-box" id="invoice">
+        <div class="header">
+            <div class="company-name">
+                <input type="text" id="companyName" value="[COMPANY NAME]">
+            </div>
+            <div class="invoice-title">INVOICE</div>
+            <div style="flex: 1;"></div>
+        </div>
+        <div class="info-section">
+            <div class="info-box">
+                <p><strong>Billing Information:</strong></p>
+                <p><strong>Name:</strong></p>
+                <input type="text" id="companyBillingName" value="Squid Consultancy">
+                <p><strong>Address:</strong></p>
+                <textarea id="companyAddress">[Your Address]</textarea>
+                <p><strong>Contact:</strong></p>
+                <input type="text" id="companyContact" value="[Your Phone Number]">
+                <p><strong>Tax ID/VAT:</strong></p>
+                <input type="text" id="companyTaxId" value="[Your Tax ID]">
+                <p><strong>Company Registration Number (CRN):</strong></p>
+                <input type="text" id="companyCrn" value="[Your CRN]">
+            </div>
+            <div class="info-box">
+                <p><strong>Client:</strong></p>
+                <p><strong>Name:</strong></p>
+                <input type="text" id="clientName" value="[Client Name or Company Name]">
+                <p><strong>Email:</strong></p>
+                <input type="text" id="clientEmail" value="[Client's Email Address]">
+                <p><strong>Contact:</strong></p>
+                <input type="text" id="clientContact" value="[Client's Phone Number]">
+                <p><strong>Reference:</strong></p>
+                <input type="text" id="clientReference" value="[Client Reference (if any)]">
+            </div>
+            <div class="info-box">
+                <p><strong>Invoice Details:</strong></p>
+                <p><strong>Invoice Number:</strong></p>
+                <input type="text" id="invoiceNo" value="101">
+                <p><strong>Invoice Date:</strong></p>
+                <input type="date" id="invoiceDate" value="2025-06-07">
+                <p><strong>Due Date:</strong></p>
+                <input type="date" id="invoiceDueDate" value="2025-07-07">
+            </div>
+        </div>
+        <div class="section">
+            <table id="itemsTable">
+                <thead>
+                    <tr>
+                        <th class="product-name-col">Product Name</th>
+                        <th class="description-col">Description</th>
+                        <th class="quantity-col">Quantity</th>
+                        <th class="unit-price-col">Unit Price</th>
+                        <th class="discount-col">Discount</th>
+                        <th class="price-col">Price</th>
+                        <th class="action-col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="item-row">
+                        <td><input type="text" class="product-name" value="Product A"></td>
+                        <td><input type="text" class="description" value="High-quality widget"></td>
+                        <td><input type="number" class="quantity" value="2" min="1"></td>
+                        <td><input type="number" class="unit-price" value="900.00" min="0" step="0.01"></td>
+                        <td><input type="number" class="discount" value="0.00" min="0" step="0.01"></td>
+                        <td class="price">$1800.00</td>
+                        <td><button class="btn btn-remove" onclick="removeRow(this)">Remove</button></td>
+                    </tr>
+                    <tr class="item-row">
+                        <td><input type="text" class="product-name" value="Product B"></td>
+                        <td><input type="text" class="description" value="Premium gadget"></td>
+                        <td><input type="number" class="quantity" value="1" min="1"></td>
+                        <td><input type="number" class="unit-price" value="500.00" min="0" step="0.01"></td>
+                        <td><input type="number" class="discount" value="0.00" min="0" step="0.01"></td>
+                        <td class="price">$500.00</td>
+                        <td><button class="btn btn-remove" onclick="removeRow(this)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn" onclick="addRow()">Add Product</button>
+        </div>
+        <div class="totals-section">
+            <div class="totals-box">
+                <div class="subtotal-row">
+                    <p><strong>Invoice Subtotal:</strong></p>
+                    <span id="subtotal">$2300.00</span>
+                </div>
+                <div class="tax-rate-row">
+                    <p><strong>Tax Rate:</strong></p>
+                    <div class="tax-rate-container">
+                        <input type="number" id="taxRate" value="4.9" min="0" step="0.1" oninput="calculateTotal()">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="subtotal-row">
+                    <p><strong>Sales Tax:</strong></p>
+                    <span id="tax">$112.70</span>
+                </div>
+                <div class="subtotal-row">
+                    <p><strong>Total:</strong></p>
+                    <span id="total">$2412.70</span>
+                </div>
+                <p><strong>Note to Customer:</strong></p>
+                <textarea class="note-textarea" id="customerNote">Thank you for your business! Please contact us with any questions regarding this invoice.</textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
