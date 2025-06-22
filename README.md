@@ -51,4 +51,8 @@ Set Publish directory: public.Click Deploy site.
 
 ##### Notes
 
-server.js is for local development only; Netlify serves static files from public/.Requires express for the local server.
+server.js is for local development only; 
+
+Netlify serves static files from public/.
+
+Requires express for the local server.
