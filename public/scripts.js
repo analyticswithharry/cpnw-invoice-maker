@@ -104,17 +104,19 @@ function uploadLogo() {
 
 function downloadPDF() {
     const clientName = document.getElementById('clientName').value.replace(/[^a-zA-Z0-9]/g, '_') || 'invoice';
-    const invoiceDate = document.getElementById('invoiceDate').value || '2025-06-22';
     const now = new Date();
-    const time = now.toTimeString().split(' ')[0].replace(/:/g, '-');
-    const filename = `${clientName}_${invoiceDate}_${time}.pdf`;
+    const day = String(now.getDate()).padStart(2, '0');
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+    const filename = `${clientName}_${day}_${month}_${year}.pdf`;
     const element = document.getElementById('invoice');
     const opt = {
         margin: 10,
         filename: filename,
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        html2canvas: { scale: 2, useCORS: true, windowWidth: 148mm, windowHeight: 210mm },
+        jsPDF: { unit: 'mm', format: 'a5', orientation: 'portrait' },
         pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
     html2pdf().set(opt).from(element).save();
